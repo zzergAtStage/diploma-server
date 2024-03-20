@@ -51,7 +51,7 @@ public class UserRepository {
     static class UserRowMapper implements RowMapper<User>{
         @Override
         public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-            User rowObject = new User();
+            User rowObject = User.createUser();
             rowObject.setId(rs.getInt("id"));
             rowObject.setFirstName(rs.getString("firstName"));
             rowObject.setLastName(rs.getString("lastName"));

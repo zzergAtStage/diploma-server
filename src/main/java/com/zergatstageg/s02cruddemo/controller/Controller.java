@@ -3,10 +3,7 @@ package com.zergatstageg.s02cruddemo.controller;
 import com.zergatstageg.s02cruddemo.domain.User;
 import com.zergatstageg.s02cruddemo.services.UserService;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,4 +54,9 @@ public class Controller {
         return "redirect:/users";
     }
 
+    @GetMapping("/authenticate")
+    public String authenticate(@RequestParam("username") String username,
+                               @RequestParam("password") String password ){
+        return "move along!: " + username + ":" + password;
+    }
 }
