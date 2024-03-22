@@ -21,3 +21,5 @@ keytool -exportcert -keystore clientkeystore.p12 -alias clientkey -storepass pas
 
 keytool -import -trustcacerts -file client-certificate.pem -keypass password -storepass password -keystore servertruststore.jks
 ```
+
+## 2run https server, execute [HttpsEnabledApplication.java](src%2Fmain%2Fjava%2Fcom%2Fzergatstageg%2Fs02cruddemo%2Fssl%2FHttpsEnabledApplication.java)

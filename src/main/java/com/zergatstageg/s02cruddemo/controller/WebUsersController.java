@@ -2,17 +2,17 @@ package com.zergatstageg.s02cruddemo.controller;
 
 import com.zergatstageg.s02cruddemo.domain.User;
 import com.zergatstageg.s02cruddemo.services.UserService;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
-@org.springframework.stereotype.Controller
-public class Controller {
+@Controller
+public class WebUsersController {
     private final UserService userService;
 
-    public Controller(UserService userService) {
+    public WebUsersController(UserService userService) {
         this.userService = userService;
 
     }
@@ -46,7 +46,6 @@ public class Controller {
         userService.deleteUserById(id);
         return "redirect:/users";
     }
-
 
     @PostMapping("/user-update")
     public String updateUser(@ModelAttribute User user){
