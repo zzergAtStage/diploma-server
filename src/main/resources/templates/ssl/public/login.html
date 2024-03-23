@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"   xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+  <title>Earthquake Monitoring App</title>
+  <link href="style.css" th:href="@{css/style.css}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Earthquake Monitoring App!</h1>
+    <p>Stay informed and prepared with real-time earthquake data.</p>
+    <form th:action="@{/login}" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Sign In" class="btn" />
+      </div>
+      <div th:if="${param.error}" class="error-message">
+        Invalid username and password.
+      </div>
+      <div th:if="${param.logout}" class="logout-message">
+        You have been logged out.
+      </div>
+    </form>
+  </div>
+</body>
+</html>

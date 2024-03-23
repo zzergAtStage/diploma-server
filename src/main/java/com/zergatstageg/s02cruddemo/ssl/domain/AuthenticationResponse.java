@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.domain;
+package com.zergatstageg.s02cruddemo.ssl.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

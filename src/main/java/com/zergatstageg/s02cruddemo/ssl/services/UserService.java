@@ -1,7 +1,7 @@
-package com.zergatstageg.s02cruddemo.services;
+package com.zergatstageg.s02cruddemo.ssl.services;
 
-import com.zergatstageg.s02cruddemo.domain.User;
-import com.zergatstageg.s02cruddemo.repository.UserRepository;
+import com.zergatstageg.s02cruddemo.ssl.domain.User;
+import com.zergatstageg.s02cruddemo.ssl.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

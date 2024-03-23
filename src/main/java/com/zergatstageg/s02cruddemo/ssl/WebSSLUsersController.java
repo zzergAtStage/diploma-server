@@ -1,7 +1,8 @@
-package com.zergatstageg.s02cruddemo.controller;
+package com.zergatstageg.s02cruddemo.ssl;
 
-import com.zergatstageg.s02cruddemo.domain.User;
-import com.zergatstageg.s02cruddemo.services.UserService;
+import com.zergatstageg.s02cruddemo.ssl.domain.User;
+import com.zergatstageg.s02cruddemo.ssl.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,13 +10,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-public class WebUsersController {
+public class WebSSLUsersController {
+    @Autowired
     private final UserService userService;
 
-    public WebUsersController(UserService userService) {
+    public WebSSLUsersController(UserService userService) {
         this.userService = userService;
-
     }
+
     @GetMapping("/users")
     public String findAll(Model model){
         List<User> users = userService.findAll();

@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("Conect.webp");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .error-message,
+  .logout-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
