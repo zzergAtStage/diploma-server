@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Create user</title>
+    <link href="datatables.css" th:href="@{/css/datatables.css}" rel="stylesheet">
 </head>
 <body>
-    <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
-        <label for="firstName">First Name</label>
-        <input type="text" th:field="*{firstName}" id="firstName" placeholder="First name">
-        <label for="lastName">Last Name</label>
-        <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
-        <input type="submit" value="Create User">
+<div class="df-container">
+    <header>
+        <div class="flex-container">
+            <img height="80px" width="80px" th:src="@{/img/Conect.webp}" alt="Logo">
+            <h1>Earthquake Monitoring App</h1>
+        </div>
+    </header>
+    <h1>Create User</h1>
+    <form th:action="@{/user-create}" th:object="${user}" method="post" class="df">
+        <div class="df-item">
+            <label for="firstName">First Name:</label>
+            <input type="text" th:field="*{firstName}" id="firstName" placeholder="Enter First Name">
+        </div>
+        <div class="df-item">
+            <label for="lastName">Last Name:</label>
+            <input type="text" th:field="*{lastName}" id="lastName" placeholder="Enter Last Name">
+        </div>
+        <div class="df-item">
+            <input type="submit" value="Create User" class="btn btn-primary">
+        </div>
     </form>
+</div>
 </body>
 </html>

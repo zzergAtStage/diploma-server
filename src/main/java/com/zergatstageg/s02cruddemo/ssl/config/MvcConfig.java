@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl;
+package com.zergatstageg.s02cruddemo.ssl.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

@@ -27,8 +27,12 @@ public class UserRepository {
     public User findById(int id){
         String sql = "SELECT * FROM users where id=?";
         return jdbc.queryForObject(sql, new BeanPropertyRowMapper<>(User.class),id);
-    }
 
+    }
+    public User findByUserName(String userName){
+        String sql = "SELECT * FROM users where firstName=?";
+        return jdbc.queryForObject(sql, new BeanPropertyRowMapper<>(User.class),userName);
+    }
 
     public User save(User user){
         String sql = "INSERT INTO users (firstName, lastName) VALUES (?,?)";

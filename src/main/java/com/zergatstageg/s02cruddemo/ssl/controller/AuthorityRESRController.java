@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl;
+package com.zergatstageg.s02cruddemo.ssl.controller;
 
 import com.zergatstageg.s02cruddemo.ssl.domain.AuthenticationResponse;
 import com.zergatstageg.s02cruddemo.ssl.domain.LoginForm;

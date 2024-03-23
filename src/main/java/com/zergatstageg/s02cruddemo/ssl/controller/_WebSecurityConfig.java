@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl;
+package com.zergatstageg.s02cruddemo.ssl.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
