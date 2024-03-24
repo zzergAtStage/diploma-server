@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 @Repository
-public class UserRepository {
+public class RIP_UserRepository {
     private final JdbcTemplate jdbc;
 
-    public UserRepository(JdbcTemplate jdbc) {
+    public RIP_UserRepository(JdbcTemplate jdbc) {
         this.jdbc = jdbc;
     }
 

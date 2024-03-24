@@ -1,6 +1,5 @@
 package com.zergatstageg.s02cruddemo.ssl.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 

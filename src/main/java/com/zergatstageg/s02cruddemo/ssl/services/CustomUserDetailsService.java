@@ -4,7 +4,6 @@ import com.zergatstageg.s02cruddemo.ssl.domain.CustomUserDetails;
 import com.zergatstageg.s02cruddemo.ssl.domain.User;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

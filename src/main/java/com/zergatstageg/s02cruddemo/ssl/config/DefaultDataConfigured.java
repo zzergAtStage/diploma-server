@@ -3,15 +3,12 @@ package com.zergatstageg.s02cruddemo.ssl.config;
 import com.zergatstageg.s02cruddemo.ssl.domain.Earthquake;
 import com.zergatstageg.s02cruddemo.ssl.repository.WarehouseService;
 import com.zergatstageg.s02cruddemo.ssl.services.ParseFeed;
-import de.fhpotsdam.unfolding.data.PointFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.Scheduled;
 import processing.core.PApplet;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,7 +24,7 @@ public class DefaultDataConfigured {
     public static List<Earthquake> parseEarthquakes(String fileName){
         return ParseFeed.parseEarthquake(new PApplet(), fileName);
     }
-    @Scheduled(fixedDelay = 10000000)
+    @Scheduled(fixedDelay = 10000)
     public void parseEarthQuakes(){
         String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
         List<Earthquake> earthquakes = DefaultDataConfigured.parseEarthquakes(earthquakesURL);

@@ -1,10 +1,10 @@
 package com.zergatstageg.s02cruddemo.ssl.domain;
 
 import de.fhpotsdam.unfolding.data.Feature;
-import de.fhpotsdam.unfolding.data.Feature.FeatureType;
 import de.fhpotsdam.unfolding.geo.Location;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
