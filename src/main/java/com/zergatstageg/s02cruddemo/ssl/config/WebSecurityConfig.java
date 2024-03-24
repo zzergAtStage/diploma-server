@@ -50,7 +50,6 @@ public class WebSecurityConfig {
 
         http.formLogin((form) -> form.loginPage("/login").permitAll()
                 .defaultSuccessUrl("/user-details"));
-        //http.formLogin(Customizer.withDefaults());
         http.httpBasic(Customizer.withDefaults());
         http.logout(LogoutConfigurer::permitAll);
         http.csrf(AbstractHttpConfigurer::disable);
