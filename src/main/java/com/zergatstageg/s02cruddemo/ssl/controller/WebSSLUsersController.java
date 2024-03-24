@@ -42,13 +42,24 @@ public class WebSSLUsersController {
 
     @PostMapping("/user-create")
     public String createUser(User user){
+        //in this point password is not encrypted?
         userService.saveUser(user);
         return "redirect:/users";
     }
 
+//    @GetMapping("/signup")
+//    public String signNewUser(User user){
+//        return "/user-signup";
+//    }
+//
+//    @PostMapping("/signup")
+//    public String createAndSignUp(User user){
+//        userService.saveUser(user);
+//        return "redirect:/user-details";
+//    }
     @GetMapping("/user-update/{id}")
     public String updateUserForm(@PathVariable int id, Model model){
-        User user = userService.findUserById(id);
+        Optional<User> user = userService.findUserById(id);
         model.addAttribute("user", user);
         return "user-update";
     }

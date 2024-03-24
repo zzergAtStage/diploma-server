@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS users (
+    id  AUTO_INCREMENT PRIMARY KEY,
+    firstName varchar2(50) NOT NULL,
+    lastName varchar2(50) NOT NULL
+);
+
+
+--    private Long id;
+--
+--    private String firstName;
+--    private String lastName;
+--    private String userEmail;
+--    private String userRole;
+--    private String userAppLicense;

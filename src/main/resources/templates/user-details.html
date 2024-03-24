@@ -1,18 +1,64 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"   xmlns:th="https://www.thymeleaf.org" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>User Details</title>
-    <link href="style.css" th:href="@{css/style.css}" rel="stylesheet">
+    <link href="datatables.css" th:href="@{css/datatables.css}" rel="stylesheet">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+        }
+        .btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+
 </head>
 <body>
-    <div class="container">
-
-        <h2>User Details</h2>
-        <p>ID: <span th:text="${user.id}">N/A</span></p>
-        <p>Email: <span th:text="${user.email}">N/A</span></p>
-        <p>First Name: <span th:text="${user.firstName}">N/A</span></p>
-        <p>Last Name: <span th:text="${user.lastName}">N/A</span></p>
+<header>
+    <div class="flex-container">
+        <a th:href="@{/}"> <img height="80px" width="80px" th:src="@{/img/Conect.webp}" alt="Logo">
+        </a>
+        <h2>Earthquake Monitoring App</h2>
     </div>
+    <h2>User Details</h2>
+</header>
+<div class="container" th:if="${user.isPresent()}">
+    <p>ID: <span th:text="${user.get().id}">N/A</span></p>
+    <p>userName: <span th:text="${user.get().userName}">N/A</span> </p>
+    <p>Email: <span th:text="${user.get().userEmail}">N/A</span></p>
+    <p>First Name: <span th:text="${user.get().firstName}">N/A</span></p>
+    <p>Last Name: <span th:text="${user.get().lastName}">N/A</span></p>
+    <p>User role: <span th:text="${user.get().userRole}">N/A</span></p>
+    <p>User access: <span th:text="${user.get().userAppLicense}">N/A</span></p>
+</div>
+<div class="container" th:if="${user.isEmpty()}">
+    <p>No user found there...</p>
+</div>
+<footer>
+    <div class="flex-container">
+        <button onclick="location.href='logout'" class="btn">Logout</button>
+        <div th:if="${user.isPresent() and user.get().userRole == 'ADMIN'}">
+            <button onclick="location.href='users'" class="btn">Manage</button>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

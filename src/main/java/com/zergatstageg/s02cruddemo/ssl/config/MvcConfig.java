@@ -1,6 +1,8 @@
 package com.zergatstageg.s02cruddemo.ssl.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -15,6 +17,9 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/home").setViewName("ssl/public/welcome");
         registry.addViewController("/").setViewName("ssl/public/welcome");
         registry.addViewController("/login").setViewName("ssl/public/login");
+        registry.addViewController("/users").setViewName("/user-list");
+        registry.addViewController("/user-signup").setViewName("ssl/public/user-signup");
+
     }
 
     /**
@@ -32,5 +37,9 @@ public class MvcConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/css/",
                         "classpath:/static/img/");
         WebMvcConfigurer.super.addResourceHandlers(registry);
+    }
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

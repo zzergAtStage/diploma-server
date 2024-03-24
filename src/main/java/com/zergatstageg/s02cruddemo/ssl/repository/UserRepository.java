@@ -56,7 +56,7 @@ public class UserRepository {
         @Override
         public User mapRow(ResultSet rs, int rowNum) throws SQLException {
             User rowObject = User.createUser();
-            rowObject.setId(rs.getInt("id"));
+            rowObject.setId(rs.getLong("id"));
             rowObject.setFirstName(rs.getString("firstName"));
             rowObject.setLastName(rs.getString("lastName"));
             return rowObject;

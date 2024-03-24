@@ -16,17 +16,31 @@
     </header>
 
     <form th:action="@{/user-update}" th:object="${user}" method="post" class="df">
-        <div class="df-item">
-            <label for="id">ID:</label>
-            <input type="number" th:field="*{id}" id="id" placeholder="ID" readonly>
-        </div>
-        <div class="df-item">
-            <label for="firstName">First Name:</label>
-            <input type="text" th:field="*{firstName}" id="firstName" placeholder="Enter First Name">
-        </div>
-        <div class="df-item">
-            <label for="lastName">Last Name:</label>
-            <input type="text" th:field="*{lastName}" id="lastName" placeholder="Enter Last Name">
+        <div class="flex-container">
+            <div class="df-item">
+                <label for="id">ID:</label>
+                <input type="number" th:field="*{id}" id="id" placeholder="ID" readonly>
+            </div>
+            <div class="df-item">
+                <label for="userName">user login:</label>
+                <input type="text" th:field="*{userName}" id="userName" placeholder="login">
+            </div>
+            <div class="df-item">
+                <label for="firstName">First Name:</label>
+                <input type="text" th:field="*{firstName}" id="firstName" placeholder="Enter First Name">
+            </div>
+            <div class="df-item">
+                <label for="lastName">Last Name:</label>
+                <input type="text" th:field="*{lastName}" id="lastName" placeholder="Enter Last Name">
+            </div>
+            <div class="df-item">
+                <label for="userEmail">Email:</label>
+                <input type="text" th:field="*{userEmail}" id="userEmail" placeholder="Enter email">
+            </div>
+            <div class="df-item">
+                <label for="userRole">Email:</label>
+                <input type="text" th:field="*{userRole}" id="userRole" placeholder="Enter userRole">
+            </div>
         </div>
         <div class="df-item">
             <input type="submit" value="Update User" class="btn btn-primary">
