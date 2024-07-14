@@ -1,29 +1,37 @@
-# Earthquake Monitoring Desktop Application
+# Earthquake Monitoring Server
 
 ## Overview
 
-The Earthquake Monitoring Desktop Application is a Java-based program designed to provide users with real-time data on seismic activities. This application allows users to log in, view earthquake data, and access detailed maps of affected areas. It ensures that authenticated users have full access to comprehensive earthquake information, while non-authenticated users can only view limited data.
+The Earthquake Monitoring Server is a robust backend service that provides data storage, user authentication, and RESTful API endpoints for the Earthquake Monitoring Desktop Application. It is built with Spring Boot and designed to ensure secure and efficient handling of user data and earthquake information.
 
 ## Features
 
-- **User Authentication**: Secure login for registered users.
-- **Real-time Data**: Fetch and display the latest earthquake data.
-- **Map Visualization**: Detailed maps showing the location and intensity of earthquakes.
-- **User Roles**: Differentiated access levels for authenticated and non-authenticated users.
+- **SSL Security**: All communications are secured with HTTPS.
+- **User Authentication**: Basic authentication to manage user access.
+- **RESTful API**: Endpoints for accessing earthquake data.
+- **Admin Web Interface**: For managing users and their licenses.
+- **Scheduled Data Parsing**: Regular updates from earthquake data feeds.
 
 ## Technologies Used
 
-- **Java**: Core programming language.
-- **Swing**: For GUI development.
-- **HTTPS**: Secure communication with the server.
-- **Publisher-Subscriber Pattern**: For handling user events and notifications.
+- **Spring Boot**: Framework for building the server application.
+- **Spring Security**: For authentication and authorization.
+- **JPA/Hibernate**: For database interactions.
+- **H2 Database**: In-memory database for development and testing.
+- **SLF4J/Logback**: For logging.
 
 ## Getting Started
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/earthquake-monitoring-desktop.git
+   git clone https://github.com/yourusername/earthquake-monitoring-server.git
    ```
+2. Navigate to the project directory, build and run the application:
+   ```bash
+   cd earthquake-monitoring-server
+   ./mvnw spring-boot:run
+   ```
+## 2run https server, execute [HttpsEnabledApplication.java](src%2Fmain%2Fjava%2Fcom%2Fzergatstageg%2Fs02cruddemo%2Fssl%2FHttpsEnabledApplication.java)
 
 
 ### Generate server keys:
@@ -49,5 +57,12 @@ keytool -exportcert -keystore clientkeystore.p12 -alias clientkey -storepass pas
 
 keytool -import -trustcacerts -file client-certificate.pem -keypass password -storepass password -keystore servertruststore.jks
 ```
+## API Endpoints
+- GET /api/earthquakes - Retrieve earthquake data.
+- POST /api/login - User login endpoint.
+- Admin Console: Access the H2 console at /console (Admin role required).
 
-## 2run https server, execute [HttpsEnabledApplication.java](src%2Fmain%2Fjava%2Fcom%2Fzergatstageg%2Fs02cruddemo%2Fssl%2FHttpsEnabledApplication.java)
+## Requirements
+- Java 8 or later: Ensure you have the latest version of Java installed.
+- Maven: For building and running the project.
+- Internet Connection: For fetching real-time earthquake data.
