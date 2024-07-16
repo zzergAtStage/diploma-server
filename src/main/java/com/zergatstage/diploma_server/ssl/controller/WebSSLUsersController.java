@@ -1,15 +1,13 @@
-package com.zergatstageg.s02cruddemo.ssl.controller;
+package com.zergatstage.diploma_server.ssl.controller;
 
-import com.zergatstageg.s02cruddemo.ssl.domain.User;
-import com.zergatstageg.s02cruddemo.ssl.services.UserService;
+import com.zergatstage.diploma_server.ssl.domain.User;
+import com.zergatstage.diploma_server.ssl.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

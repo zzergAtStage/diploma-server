@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo;
+package com.zergatstage.diploma_server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

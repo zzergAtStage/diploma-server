@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo;
+package com.zergatstage.diploma_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

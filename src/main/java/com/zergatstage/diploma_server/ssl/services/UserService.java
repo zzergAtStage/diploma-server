@@ -1,10 +1,8 @@
-package com.zergatstageg.s02cruddemo.ssl.services;
+package com.zergatstage.diploma_server.ssl.services;
 
-import com.zergatstageg.s02cruddemo.ssl.domain.User;
-import com.zergatstageg.s02cruddemo.ssl.repository.UserRepository;
-import com.zergatstageg.s02cruddemo.ssl.repository._UserRepository;
+import com.zergatstage.diploma_server.ssl.domain.User;
+import com.zergatstage.diploma_server.ssl.repository._UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 

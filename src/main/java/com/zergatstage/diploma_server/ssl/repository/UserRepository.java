@@ -1,6 +1,6 @@
-package com.zergatstageg.s02cruddemo.ssl.repository;
+package com.zergatstage.diploma_server.ssl.repository;
 
-import com.zergatstageg.s02cruddemo.ssl.domain.User;
+import com.zergatstage.diploma_server.ssl.domain.User;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

@@ -1,6 +1,5 @@
-package com.zergatstageg.s02cruddemo.ssl.domain;
+package com.zergatstage.diploma_server.ssl.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 

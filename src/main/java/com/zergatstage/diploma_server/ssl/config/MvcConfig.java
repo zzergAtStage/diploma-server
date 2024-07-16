@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl.config;
+package com.zergatstage.diploma_server.ssl.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

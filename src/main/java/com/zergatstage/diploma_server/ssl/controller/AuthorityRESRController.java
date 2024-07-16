@@ -1,7 +1,7 @@
-package com.zergatstageg.s02cruddemo.ssl.controller;
+package com.zergatstage.diploma_server.ssl.controller;
 
-import com.zergatstageg.s02cruddemo.ssl.domain.AuthenticationResponse;
-import com.zergatstageg.s02cruddemo.ssl.domain.LoginForm;
+import com.zergatstage.diploma_server.ssl.domain.AuthenticationResponse;
+import com.zergatstage.diploma_server.ssl.domain.LoginForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

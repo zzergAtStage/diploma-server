@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl.domain;
+package com.zergatstage.diploma_server.ssl.domain;
 
 public enum UserRole {
     USER,

@@ -1,4 +1,4 @@
-package com.zergatstageg.s02cruddemo.ssl.controller;
+package com.zergatstage.diploma_server.ssl.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
